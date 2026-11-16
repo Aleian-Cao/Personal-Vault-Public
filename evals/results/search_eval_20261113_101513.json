@@ -1,0 +1,391 @@
+{
+ "timestamp": "20261113_101513",
+ "runner": null,
+ "entries": 507,
+ "crashes": 0,
+ "summary": {
+  "original 138 (all)": {
+   "n": 138,
+   "correct": 130,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 8,
+   "false_exact": 0,
+   "numeric_violations": 0,
+   "exact_answers": 50,
+   "secret_leaks": 0,
+   "answer_ms_p50": 12.1,
+   "answer_ms_p95": 28.0
+  },
+  "original dev (86)": {
+   "n": 86,
+   "correct": 80,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 6,
+   "false_exact": 0,
+   "numeric_violations": 0,
+   "exact_answers": 31,
+   "secret_leaks": 0,
+   "answer_ms_p50": 11.1,
+   "answer_ms_p95": 22.6
+  },
+  "original held-out (52)": {
+   "n": 52,
+   "correct": 50,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 2,
+   "false_exact": 0,
+   "numeric_violations": 0,
+   "exact_answers": 19,
+   "secret_leaks": 0,
+   "answer_ms_p50": 13.3,
+   "answer_ms_p95": 30.5
+  },
+  "red-team round 1 (34)": {
+   "n": 34,
+   "correct": 34,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 0,
+   "false_exact": 0,
+   "numeric_violations": 7,
+   "exact_answers": 0,
+   "secret_leaks": 0,
+   "answer_ms_p50": 13.3,
+   "answer_ms_p95": 20.0
+  },
+  "red-team round 2 (24)": {
+   "n": 24,
+   "correct": 24,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 0,
+   "false_exact": 0,
+   "numeric_violations": 2,
+   "exact_answers": 3,
+   "secret_leaks": 0,
+   "answer_ms_p50": 13.6,
+   "answer_ms_p95": 30.5
+  },
+  "red-team round 3 (30)": {
+   "n": 30,
+   "correct": 21,
+   "wrong_account": 0,
+   "clarification": 1,
+   "abstain": 8,
+   "false_exact": 0,
+   "numeric_violations": 6,
+   "exact_answers": 1,
+   "secret_leaks": 0,
+   "answer_ms_p50": 18.5,
+   "answer_ms_p95": 28.3
+  },
+  "red-team round 4 (21)": {
+   "n": 21,
+   "correct": 20,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 1,
+   "false_exact": 0,
+   "numeric_violations": 3,
+   "exact_answers": 3,
+   "secret_leaks": 0,
+   "answer_ms_p50": 16.6,
+   "answer_ms_p95": 43.7
+  },
+  "ALL (247)": {
+   "n": 247,
+   "correct": 229,
+   "wrong_account": 0,
+   "clarification": 1,
+   "abstain": 17,
+   "false_exact": 0,
+   "numeric_violations": 18,
+   "exact_answers": 57,
+   "secret_leaks": 0,
+   "answer_ms_p50": 13.3,
+   "answer_ms_p95": 30.5
+  }
+ },
+ "wrong_account_cases": [],
+ "non_correct_non_wrong": [
+  {
+   "id": "E04-03",
+   "split": "dev",
+   "query": "cho mình hỏi tài khoản facebook bán hàng với",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Shop",
+    "name": "demo.shop@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-06",
+   "split": "dev",
+   "query": "tôi muốn đăng nhập vào máy pscad số 3 thì dùng tài khoản nào",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "PSCAD Demo 3",
+    "name": "pscad3"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-07",
+   "split": "dev",
+   "query": "tài khoản mạng xã hội dùng để bán hàng online là gì",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Shop",
+    "name": "demo.shop@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-08",
+   "split": "dev",
+   "query": "cái wifi ở phòng họp tầng ba mật khẩu bao nhiêu nhỉ",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Wifi Phòng họp Tầng 3",
+    "name": "wifi.tang3"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-10",
+   "split": "heldout",
+   "query": "cho mình hỏi đăng nhập vpn số 3 ở đâu vậy",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "VPN Demo 3",
+    "name": "vpn3"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-11",
+   "split": "dev",
+   "query": "email của công ty mình để đăng ký phần mềm là gì",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Gmail Công ty",
+    "name": "ops.demo@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-17",
+   "split": "dev",
+   "query": "tôi cần tài khoản ngân hàng demo để chuyển khoản thử",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Ngân hàng Demo",
+    "name": "bank.demo"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E05-15",
+   "split": "heldout",
+   "query": "ừm cho mình xem cái thứ hai trong mấy cái pscad lúc nãy",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "PSCAD Demo 2",
+    "name": "pscad2"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-05",
+   "split": "redteam3",
+   "query": "hộp thư",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Gmail Công ty",
+    "name": "ops.demo@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-10",
+   "split": "redteam3",
+   "query": "dev box trừ A",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box B"
+    ]
+   },
+   "status": "suggested",
+   "got": [
+    "Dev Box B"
+   ],
+   "outcome": "clarification"
+  },
+  {
+   "id": "R3-11",
+   "split": "redteam3",
+   "query": "máy ạ",
+   "prev": [
+    "dev"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-12",
+   "split": "redteam3",
+   "query": "mục sau cùng",
+   "prev": [
+    "demo"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "Synthetic Account 1",
+    "name": "demo1"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-17",
+   "split": "redteam3",
+   "query": "mật khẩu máy ạ",
+   "prev": [
+    "dev"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-27",
+   "split": "redteam3",
+   "query": "dev box a, b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-28",
+   "split": "redteam3",
+   "query": "dev box a & b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-29",
+   "split": "redteam3",
+   "query": "dev box a/b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R3-30",
+   "split": "redteam3",
+   "query": "dev box a b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "R4-08",
+   "split": "redteam4",
+   "query": "hop thu",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Gmail Công ty",
+    "name": "ops.demo@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  }
+ ],
+ "wall_s": 5.0
+}

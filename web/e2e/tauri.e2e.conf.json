@@ -1,0 +1,31 @@
+{
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Personal Vault",
+        "width": 1040,
+        "height": 720,
+        "minWidth": 780,
+        "minHeight": 520,
+        "resizable": true,
+        "fullscreen": false,
+        "additionalBrowserArgs": "--disable-features=msWebOOUI,msPdfOOUI,msSmartScreenProtection,StorageServiceOutOfProcess --disable-background-networking --disable-component-update --disable-domain-reliability --disable-sync --no-pings --disable-breakpad --disable-gpu --renderer-process-limit=1 --enable-features=NetworkServiceInProcess2 --no-proxy-server --remote-debugging-port=9333"
+      },
+      {
+        "label": "quick",
+        "title": "Personal Vault - Quick Access",
+        "url": "index.html#quick",
+        "width": 560,
+        "height": 440,
+        "resizable": false,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "visible": false,
+        "center": true,
+        "additionalBrowserArgs": "--disable-features=msWebOOUI,msPdfOOUI,msSmartScreenProtection,StorageServiceOutOfProcess --disable-background-networking --disable-component-update --disable-domain-reliability --disable-sync --no-pings --disable-breakpad --disable-gpu --renderer-process-limit=1 --enable-features=NetworkServiceInProcess2 --no-proxy-server --remote-debugging-port=9333"
+      }
+    ]
+  }
+}

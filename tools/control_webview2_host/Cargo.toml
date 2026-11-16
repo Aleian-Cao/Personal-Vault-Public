@@ -1,0 +1,14 @@
+[package]
+name = "control_webview2_host"
+version = "0.1.0"
+edition = "2021"
+# QA control only: a minimal, independent WebView2 host (no Personal Vault code, no sidecar) used to tell whether the WebView2 RUNTIME
+# alone produces the outbound connections. Same wry/tao versions as the app (offline from the cargo cache).
+
+[dependencies]
+wry = "=0.57.2"
+tao = "=0.37.2"
+
+[profile.release]
+opt-level = "s"
+lto = true

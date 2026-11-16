@@ -1,0 +1,3 @@
+# Versions used in Linux verification; verify Windows wheels/support before release.
+cryptography==46.0.4
+argon2-cffi==25.1.0

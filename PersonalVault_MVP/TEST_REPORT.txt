@@ -1,0 +1,38 @@
+test_bad_json (test_core.ImportTests.test_bad_json) ... ok
+test_csv (test_core.ImportTests.test_csv) ... ok
+test_duplicate_field (test_core.ImportTests.test_duplicate_field) ... ok
+test_duplicate_records (test_core.ImportTests.test_duplicate_records) ... ok
+test_json (test_core.ImportTests.test_json) ... ok
+test_missing (test_core.ImportTests.test_missing) ... ok
+test_script_comments (test_core.ImportTests.test_script_comments) ... ok
+test_script_reject_commands (test_core.ImportTests.test_script_reject_commands) ... ok
+test_text (test_core.ImportTests.test_text) ... ok
+test_unsupported (test_core.ImportTests.test_unsupported) ... ok
+test_alias (test_core.SearchTests.test_alias) ... ok
+test_attached_number (test_core.SearchTests.test_attached_number) ... ok
+test_collision (test_core.SearchTests.test_collision) ... ok
+test_description (test_core.SearchTests.test_description) ... ok
+test_empty (test_core.SearchTests.test_empty) ... ok
+test_fuzzy_suggest (test_core.SearchTests.test_fuzzy_suggest) ... ok
+test_natural_prefix (test_core.SearchTests.test_natural_prefix) ... ok
+test_password_not_indexed (test_core.SearchTests.test_password_not_indexed) ... ok
+test_pscad (test_core.SearchTests.test_pscad) ... ok
+test_server_number (test_core.SearchTests.test_server_number) ... ok
+test_unaccented (test_core.SearchTests.test_unaccented) ... ok
+test_unknown (test_core.SearchTests.test_unknown) ... ok
+test_wrong_number (test_core.SearchTests.test_wrong_number) ... ok
+test_backup (test_core.VaultTests.test_backup) ... ok
+test_corruption_no_overwrite (test_core.VaultTests.test_corruption_no_overwrite) ... ok
+test_duplicate_id (test_core.VaultTests.test_duplicate_id) ... ok
+test_invalid_header (test_core.VaultTests.test_invalid_header) ... ok
+test_locked (test_core.VaultTests.test_locked) ... ok
+test_no_overwrite_create (test_core.VaultTests.test_no_overwrite_create) ... ok
+test_nonce_changes (test_core.VaultTests.test_nonce_changes) ... ok
+test_roundtrip_and_ciphertext (test_core.VaultTests.test_roundtrip_and_ciphertext) ... ok
+test_wrong_password (test_core.VaultTests.test_wrong_password) ... ok
+test_unlock_search_select_reveal_lock (test_ui.UiSmoke.test_unlock_search_select_reveal_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 17.733s
+
+OK

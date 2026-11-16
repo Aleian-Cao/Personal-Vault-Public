@@ -1,0 +1,7 @@
+Account: Demo Import Account
+Name: demo-import@example.invalid
+Pass: CANARY_IMPORT_ONLY_001
+Aliases: demo import; tài khoản thử
+Description: Synthetic data only.
+Tags: demo; test
+URL: https://example.invalid

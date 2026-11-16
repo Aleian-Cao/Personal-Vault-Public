@@ -1,0 +1,196 @@
+{
+ "description": "Round-7 red-team of the round-6 patch: 15 claims confirmed by two independent judges (dedup -> 13). serious = exact + secret action on an account the user did not choose; residual-exclusion-list = comma/&/ạ exclusion lists ignored (result stays ambiguous, no exact, no action).",
+ "cases": [
+  {
+   "id": "R7-01",
+   "lens": "alias-collision",
+   "class": "residual-exclusion-list",
+   "query": "etap trừ 1, 5",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 11",
+     "ETAP Server 15",
+     "ETAP Server 51"
+    ]
+   },
+   "why_wrong": "The user excludes ETAP 1 and ETAP 5 with a comma-separated list. The result still lists both excluded entries. Same with '&', ';', '/', '+', '-' and with 'không phải 1, 5' or 'ngoại trừ 1, 5'. Only the 'và/hoặc/với/cùng' conjunctions work."
+  },
+  {
+   "id": "R7-02",
+   "lens": "alias-collision",
+   "class": "residual-exclusion-list",
+   "query": "etap trừ 1 và 5, 11",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 51"
+    ]
+   },
+   "why_wrong": "Mixed separators. 'và' splits the list but the comma does not, so '5, 11' becomes one item and neither ETAP 5 nor ETAP 11 is excluded. The returned list has excluded entries. The mirror case 'etap trừ 1, 5 và 11' returns ETAP 1 and ETAP 5."
+  },
+  {
+   "id": "R7-03",
+   "lens": "alias-collision",
+   "class": "residual-exclusion-list",
+   "query": "demo 3 trừ pscad, synthetic",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "VPN Demo 3",
+    "name": ""
+   },
+   "why_wrong": "With a comma, both exclusions are ignored. The first returned entry is PSCAD Demo 3, which the user excluded. The 'và' form gives VPN Demo 3 correctly."
+  },
+  {
+   "id": "R7-04",
+   "lens": "alias-collision",
+   "class": "residual-exclusion-list",
+   "query": "facebook trừ shop, cá nhân",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "why_wrong": "Both Facebook entries are excluded, so the answer should be none. Both are returned. 'fb trừ chính, bán hàng' and 'dev box trừ a, b' do the same."
+  },
+  {
+   "id": "R7-05",
+   "lens": "numeric-identity",
+   "class": "residual-exclusion-list",
+   "query": "pscad trừ 1, 2, 3",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 4",
+     "PSCAD Demo 5"
+    ]
+   },
+   "why_wrong": "Comma-separated exclusion list. The user excluded 1, 2 and 3 but all five are returned, including the three explicitly excluded accounts. Also wrong: 'pscad trừ 1,2', 'etap trừ 1, 5' (returns ETAP 1 and 5), 'pscad ngoại trừ 1, 5', 'pscad trừ 1 và 2, 3' (returns PSCAD 2 and 3), 'etap server trừ 1, 15"
+  },
+  {
+   "id": "R7-06",
+   "lens": "numeric-identity",
+   "class": "residual-exclusion-list",
+   "query": "pscad trừ 1 & 5",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 2",
+     "PSCAD Demo 3",
+     "PSCAD Demo 4"
+    ]
+   },
+   "why_wrong": "'&' is not a recognised list separator, so no exclusion is applied and both excluded entries come back. Same for 'pscad trừ 1 lẫn 5', 'pscad trừ 1 / 5' and 'pscad trừ cả 1 và 5' (PSCAD 1 returned, because the filler 'cả' stays inside the item ('ca','1') and matches nothing)."
+  },
+  {
+   "id": "R7-07",
+   "lens": "dropped-filler",
+   "class": "serious",
+   "query": "copy mật khẩu máy của Ba",
+   "prev": [
+    "pscad demo"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 1",
+     "PSCAD Demo 2",
+     "PSCAD Demo 3",
+     "PSCAD Demo 4",
+     "PSCAD Demo 5"
+    ]
+   },
+   "why_wrong": "'máy của Ba' means Ba's machine (a person), not machine number three. The follow-up router treats 'của' as transparent between the marker 'máy' and the next word, so the capitalised name 'Ba' becomes the ordinal 3. It returns exact PSCAD Demo 3 with a copy-password action. The same happens with 'máy"
+  },
+  {
+   "id": "R7-08",
+   "lens": "dropped-filler",
+   "class": "residual-exclusion-list",
+   "query": "facebook trừ cá nhân ạ",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Shop",
+    "name": "demo.shop@example.invalid"
+   },
+   "why_wrong": "The exclusion is silently ignored when the sentence ends with the particle 'ạ' or 'a'. The user explicitly excluded cá nhân, but the excluded Facebook — Demo Personal is returned first. Same for 'facebook trừ personal a' and 'facebook không phải cá nhân ạ'. 'etap server trừ 15 ạ' returns ETAP Server"
+  },
+  {
+   "id": "R7-09",
+   "lens": "robustness-new-classes",
+   "class": "serious",
+   "query": "cái thứ nhất copy mật khẩu của nó",
+   "prev": [
+    "pscad3"
+   ],
+   "gold": {
+    "type": "none"
+   },
+   "why_wrong": "'pscad3' returns a single UNCONFIRMED suggestion (kind 'match', status suggested). Rule (B) says a pronoun alone ('nó') after it only asks for the name, and a marked ordinal into a group of one returns a none-message. Combining the two ('cái thứ nhất ... của nó') skips both guards and returns exact "
+  },
+  {
+   "id": "R7-10",
+   "lens": "robustness-new-classes",
+   "class": "residual-exclusion-list",
+   "query": "pscad trừ 1, 2",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 3",
+     "PSCAD Demo 4",
+     "PSCAD Demo 5"
+    ]
+   },
+   "why_wrong": "Rule (C) list exclusion without the word 'và'. Commas are stripped by norm, so the tail becomes ONE item ('1','2'). An item excludes an entry only if ALL its words describe that entry, so nothing is excluded and the explicitly excluded PSCAD Demo 1 and 2 are returned (wrong accounts). Also 'pscad ng"
+  },
+  {
+   "id": "R7-11",
+   "lens": "robustness-new-classes",
+   "class": "residual-exclusion-list",
+   "query": "pscad trừ 3, trừ 4",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 1",
+     "PSCAD Demo 2",
+     "PSCAD Demo 5"
+    ]
+   },
+   "why_wrong": "A repeated negator. Only the first 'trừ' is split, and the tail ('3','tru','4') becomes one item that matches nothing, so both excluded entries PSCAD Demo 3 and 4 are returned. 'pscad trừ 3 và trừ 4' returns PSCAD Demo 4 (excluded) and 'pscad trừ 3 trừ 4' returns both 3 and 4."
+  },
+  {
+   "id": "R7-12",
+   "lens": "robustness-new-classes",
+   "class": "residual-exclusion-list",
+   "query": "pscad trừ 1 2 3 4",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "PSCAD Demo 5",
+    "name": ""
+   },
+   "why_wrong": "Four of the five PSCAD entries were explicitly excluded, yet all five are returned. 'pscad trừ 1, 2, 3, 4, 5' (gold none, everything excluded) also returns all 5 PSCAD entries (ambiguous)."
+  },
+  {
+   "id": "R7-13",
+   "lens": "exact-and-secret-invariants",
+   "class": "serious",
+   "query": "mật khẩu cái cuối",
+   "prev": [
+    "synthetic account"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": []
+   },
+   "why_wrong": "The previous result is an ambiguous group of 488 entries of which only 10 were returned/displayed (total=488, entries capped by MAX_ITEMS). The follow-up resolves positions against the full hidden ctx['ids'] (up to 2000), so 'cái cuối' / 'thứ 11' / 'thứ 50' return status exact plus a secret operatio"
+  }
+ ]
+}

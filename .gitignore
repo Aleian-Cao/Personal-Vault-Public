@@ -1,0 +1,46 @@
+# Python / Virtualenvs / Bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node / Web
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Rust / Tauri build & sidecar binaries
+target/
+web/src-tauri/gen/schemas/
+web/src-tauri/bin/*.exe
+
+# PyInstaller & Build outputs
+build/
+dist-*/
+artifacts/
+screenshots/
+*.exe
+*.dll
+*.pdb
+*.msi
+*.zip
+
+# Vault files, secrets, keys (never commit)
+*.pvault
+.pvault-*
+*.pvault.lock
+*.kdbx
+*.key
+*.pem
+*.pfx
+*.p12
+*.gguf
+
+# Logs & OS artifacts
+*.log
+.DS_Store
+Thumbs.db
+nul

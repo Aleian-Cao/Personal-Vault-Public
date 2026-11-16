@@ -1,0 +1,388 @@
+{
+ "description": "Round-3 blind red-team: wrong-account cases confirmed by 2 judges (2026-11-12). Scored as wrong-account-free (an abstain is acceptable).",
+ "cases": [
+  {
+   "id": "R3-01",
+   "lens": "alias-collision",
+   "query": "dev box trừ a",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Dev Box B"
+   }
+  },
+  {
+   "id": "R3-02",
+   "lens": "alias-collision",
+   "query": "dev box không phải a mà b",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Dev Box B"
+   }
+  },
+  {
+   "id": "R3-03",
+   "lens": "alias-collision",
+   "query": "máy 5, 1",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 5",
+     "ETAP Server 1"
+    ]
+   }
+  },
+  {
+   "id": "R3-04",
+   "lens": "alias-collision",
+   "query": "máy 1 5",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 1",
+     "ETAP Server 5"
+    ]
+   }
+  },
+  {
+   "id": "R3-05",
+   "lens": "alias-collision",
+   "query": "hộp thư",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Gmail Công ty"
+   }
+  },
+  {
+   "id": "R3-06",
+   "lens": "numeric-identity",
+   "query": "máy 1-5",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 1",
+     "ETAP Server 5"
+    ]
+   }
+  },
+  {
+   "id": "R3-07",
+   "lens": "numeric-identity",
+   "query": "máy số 5 và số 1",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 5",
+     "ETAP Server 1"
+    ]
+   }
+  },
+  {
+   "id": "R3-08",
+   "lens": "fuzzy-typos",
+   "query": "máy 1, 5",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 1",
+     "ETAP Server 5"
+    ]
+   }
+  },
+  {
+   "id": "R3-09",
+   "lens": "fuzzy-typos",
+   "query": "máy ạ",
+   "prev": [
+    "dev box"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R3-10",
+   "lens": "fuzzy-typos",
+   "query": "dev box trừ A",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-11",
+   "lens": "dropped-filler",
+   "query": "máy ạ",
+   "prev": [
+    "dev"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-12",
+   "lens": "dropped-filler",
+   "query": "mục sau cùng",
+   "prev": [
+    "demo"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "Synthetic Account 1"
+   }
+  },
+  {
+   "id": "R3-13",
+   "lens": "dropped-filler",
+   "query": "kết quả năm nay",
+   "prev": [
+    "demo"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R3-14",
+   "lens": "dropped-filler",
+   "query": "thứ tự",
+   "prev": [
+    "demo"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R3-15",
+   "lens": "context-bleed",
+   "query": "máy b và a",
+   "prev": [
+    "dev"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-16",
+   "lens": "context-bleed",
+   "query": "copy mật khẩu máy b và a",
+   "prev": [
+    "dev"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-17",
+   "lens": "context-bleed",
+   "query": "mật khẩu máy ạ",
+   "prev": [
+    "dev"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-18",
+   "lens": "context-bleed",
+   "query": "máy đầu tiên",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 1"
+    ]
+   }
+  },
+  {
+   "id": "R3-19",
+   "lens": "robustness-new-classes",
+   "query": "Dev Box ạ",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-20",
+   "lens": "robustness-new-classes",
+   "query": "cho tôi Dev Box ạ",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-21",
+   "lens": "robustness-new-classes",
+   "query": "Dev Box à nhé",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-22",
+   "lens": "robustness-new-classes",
+   "query": "dev box không phải a",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Dev Box B"
+   }
+  },
+  {
+   "id": "R3-23",
+   "lens": "robustness-new-classes",
+   "query": "dev box ngoài a ra",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Dev Box B"
+   }
+  },
+  {
+   "id": "R3-24",
+   "lens": "robustness-new-classes",
+   "query": "máy 5, 1",
+   "prev": [
+    "ETAP Server"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 5",
+     "ETAP Server 1"
+    ]
+   }
+  },
+  {
+   "id": "R3-25",
+   "lens": "robustness-new-classes",
+   "query": "máy 5, 2",
+   "prev": [
+    "ETAP Server"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R3-26",
+   "lens": "robustness-new-classes",
+   "query": "phòng 15",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R3-27",
+   "lens": "recall-cost",
+   "query": "dev box a, b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-28",
+   "lens": "recall-cost",
+   "query": "dev box a & b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-29",
+   "lens": "recall-cost",
+   "query": "dev box a/b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R3-30",
+   "lens": "recall-cost",
+   "query": "dev box a b",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  }
+ ]
+}

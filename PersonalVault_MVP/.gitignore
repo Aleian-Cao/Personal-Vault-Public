@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+*.pvault
+.pvault-*
+*.kdbx
+build/
+dist/
+*.spec

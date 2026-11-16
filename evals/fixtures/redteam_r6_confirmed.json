@@ -1,0 +1,180 @@
+{
+ "description": "Round-6 attack lenses on the exact-gate build (2026-11-13): confirmed cases. Wrong-account-free scoring (abstain/clarification ok).",
+ "cases": [
+  {
+   "id": "R6-01",
+   "lens": "alias-collision",
+   "query": "etap trừ 1 và 5",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 11",
+     "ETAP Server 51"
+    ]
+   }
+  },
+  {
+   "id": "R6-02",
+   "lens": "alias-collision",
+   "query": "etap trừ máy 1",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 5",
+     "ETAP Server 11",
+     "ETAP Server 51"
+    ]
+   }
+  },
+  {
+   "id": "R6-03",
+   "lens": "alias-collision",
+   "query": "máy 3",
+   "prev": [
+    "demo"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "VPN Demo 3",
+     "PSCAD Demo 3",
+     "Synthetic Account 3"
+    ]
+   }
+  },
+  {
+   "id": "R6-04",
+   "lens": "numeric-identity",
+   "query": "1",
+   "prev": [
+    "etap server 15"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R6-05",
+   "lens": "numeric-identity",
+   "query": "1",
+   "prev": [
+    "etap sever 15"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R6-06",
+   "lens": "fuzzy-typos",
+   "query": "mk 1",
+   "prev": [
+    "pscad demo 2"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 2",
+     "PSCAD Demo 1",
+     "ETAP Server 1",
+     "Synthetic Account 1"
+    ]
+   }
+  },
+  {
+   "id": "R6-07",
+   "lens": "dropped-filler",
+   "query": "zalo của anh Minh",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R6-08",
+   "lens": "context-bleed",
+   "query": "mấy cái đầu",
+   "prev": [
+    "etap server"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 1",
+     "ETAP Server 5",
+     "ETAP Server 11",
+     "ETAP Server 51"
+    ]
+   }
+  },
+  {
+   "id": "R6-09",
+   "lens": "context-bleed",
+   "query": "máy 3",
+   "prev": [
+    "wifi họp"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R6-10",
+   "lens": "robustness-new-classes",
+   "query": "etap ngoại trừ 5",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 1",
+     "ETAP Server 11",
+     "ETAP Server 51"
+    ]
+   }
+  },
+  {
+   "id": "R6-11",
+   "lens": "robustness-new-classes",
+   "query": "etap trừ máy 5",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 1",
+     "ETAP Server 11",
+     "ETAP Server 51"
+    ]
+   }
+  },
+  {
+   "id": "R6-12",
+   "lens": "robustness-new-classes",
+   "query": "facebook trừ shop và personal",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R6-13",
+   "lens": "robustness-new-classes",
+   "query": "etap server trừ 5 và 1",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 11",
+     "ETAP Server 51"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,244 @@
+{
+ "description": "Round-4 blind red-team: confirmed wrong-account cases (2026-11-12). Wrong-account-free scoring (abstain ok).",
+ "cases": [
+  {
+   "id": "R4-01",
+   "lens": "alias-collision",
+   "query": "máy bốn",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-02",
+   "lens": "alias-collision",
+   "query": "etap trừ mô phỏng",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 1",
+     "ETAP Server 5",
+     "ETAP Server 11",
+     "ETAP Server 51"
+    ]
+   }
+  },
+  {
+   "id": "R4-03",
+   "lens": "numeric-identity",
+   "query": "máy hai",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-04",
+   "lens": "numeric-identity",
+   "query": "máy cuối",
+   "prev": [
+    "synthetic account"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-05",
+   "lens": "numeric-identity",
+   "query": "máy Hải",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-06",
+   "lens": "numeric-identity",
+   "query": "máy hai tư",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-07",
+   "lens": "numeric-identity",
+   "query": "máy 5 cùng 1",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 5",
+     "ETAP Server 1"
+    ]
+   }
+  },
+  {
+   "id": "R4-08",
+   "lens": "fuzzy-typos",
+   "query": "hop thu",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Gmail Công ty"
+   }
+  },
+  {
+   "id": "R4-09",
+   "lens": "dropped-filler",
+   "query": "số nhà 3",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-10",
+   "lens": "dropped-filler",
+   "query": "nhà máy 3",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-11",
+   "lens": "dropped-filler",
+   "query": "máy của tôi số 5",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "ETAP Server 5"
+   }
+  },
+  {
+   "id": "R4-12",
+   "lens": "dropped-filler",
+   "query": "họp thư",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-13",
+   "lens": "context-bleed",
+   "query": "mật khẩu máy đâu",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-14",
+   "lens": "robustness-new-classes",
+   "query": "ETAP Server 1​1",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "ETAP Server 11"
+   }
+  },
+  {
+   "id": "R4-15",
+   "lens": "robustness-new-classes",
+   "query": "máy 1​5",
+   "prev": [
+    "etap server"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "ETAP Server 15"
+   }
+  },
+  {
+   "id": "R4-16",
+   "lens": "robustness-new-classes",
+   "query": "dev box ạ",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R4-17",
+   "lens": "robustness-new-classes",
+   "query": "máy ạ",
+   "prev": [
+    "dev box"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-18",
+   "lens": "robustness-new-classes",
+   "query": "máy Nhật",
+   "prev": [
+    "etap server"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-19",
+   "lens": "robustness-new-classes",
+   "query": "máy bay",
+   "prev": [
+    "demo"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-20",
+   "lens": "robustness-new-classes",
+   "query": "máy hai",
+   "prev": [
+    "etap server"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R4-21",
+   "lens": "recall-cost",
+   "query": "máy ạ",
+   "prev": [
+    "dev server"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  }
+ ]
+}

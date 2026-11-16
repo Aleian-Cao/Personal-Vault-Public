@@ -1,0 +1,233 @@
+{
+ "timestamp": "20261112_150410",
+ "runner": null,
+ "entries": 507,
+ "crashes": 0,
+ "summary": {
+  "original 138 (all)": {
+   "n": 138,
+   "correct": 127,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 11,
+   "false_exact": 0,
+   "numeric_violations": 0,
+   "exact_answers": 51,
+   "secret_leaks": 0,
+   "answer_ms_p50": 11.1,
+   "answer_ms_p95": 24.6
+  },
+  "original dev (86)": {
+   "n": 86,
+   "correct": 79,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 7,
+   "false_exact": 0,
+   "numeric_violations": 0,
+   "exact_answers": 32,
+   "secret_leaks": 0,
+   "answer_ms_p50": 7.5,
+   "answer_ms_p95": 23.1
+  },
+  "original held-out (52)": {
+   "n": 52,
+   "correct": 48,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 4,
+   "false_exact": 0,
+   "numeric_violations": 0,
+   "exact_answers": 19,
+   "secret_leaks": 0,
+   "answer_ms_p50": 13.4,
+   "answer_ms_p95": 25.9
+  },
+  "red-team confirmed (34)": {
+   "n": 34,
+   "correct": 34,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 0,
+   "false_exact": 0,
+   "numeric_violations": 7,
+   "exact_answers": 0,
+   "secret_leaks": 0,
+   "answer_ms_p50": 12.1,
+   "answer_ms_p95": 17.3
+  },
+  "ALL (172)": {
+   "n": 172,
+   "correct": 161,
+   "wrong_account": 0,
+   "clarification": 0,
+   "abstain": 11,
+   "false_exact": 0,
+   "numeric_violations": 7,
+   "exact_answers": 51,
+   "secret_leaks": 0,
+   "answer_ms_p50": 11.4,
+   "answer_ms_p95": 23.1
+  }
+ },
+ "wrong_account_cases": [],
+ "non_correct_non_wrong": [
+  {
+   "id": "E02-14",
+   "split": "heldout",
+   "query": "eatp 15",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "ETAP Server 15",
+    "name": "demo15"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-03",
+   "split": "dev",
+   "query": "cho mình hỏi tài khoản facebook bán hàng với",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Shop",
+    "name": "demo.shop@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-05",
+   "split": "heldout",
+   "query": "ơi cho anh xin mật khẩu mail công ty",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Gmail Công ty",
+    "name": "ops.demo@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-06",
+   "split": "dev",
+   "query": "tôi muốn đăng nhập vào máy pscad số 3 thì dùng tài khoản nào",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "PSCAD Demo 3",
+    "name": "pscad3"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-07",
+   "split": "dev",
+   "query": "tài khoản mạng xã hội dùng để bán hàng online là gì",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Shop",
+    "name": "demo.shop@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-08",
+   "split": "dev",
+   "query": "cái wifi ở phòng họp tầng ba mật khẩu bao nhiêu nhỉ",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Wifi Phòng họp Tầng 3",
+    "name": "wifi.tang3"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-10",
+   "split": "heldout",
+   "query": "cho mình hỏi đăng nhập vpn số 3 ở đâu vậy",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "VPN Demo 3",
+    "name": "vpn3"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-11",
+   "split": "dev",
+   "query": "email của công ty mình để đăng ký phần mềm là gì",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Gmail Công ty",
+    "name": "ops.demo@example.invalid"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-16",
+   "split": "dev",
+   "query": "cho em xin cái tk zalo nhé",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Zalo Demo",
+    "name": "zalo.demo"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E04-17",
+   "split": "dev",
+   "query": "tôi cần tài khoản ngân hàng demo để chuyển khoản thử",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Ngân hàng Demo",
+    "name": "bank.demo"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  },
+  {
+   "id": "E05-15",
+   "split": "heldout",
+   "query": "ừm cho mình xem cái thứ hai trong mấy cái pscad lúc nãy",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "PSCAD Demo 2",
+    "name": "pscad2"
+   },
+   "status": "none",
+   "got": [],
+   "outcome": "abstain"
+  }
+ ],
+ "wall_s": 2.3
+}

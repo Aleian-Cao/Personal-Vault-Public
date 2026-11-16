@@ -1,0 +1,731 @@
+{
+ "description": "Wrong-account cases found by blind red-team and confirmed by 2 independent judges (2026-11-12). Separate from queries.json; ground truth of the original 138 is untouched.",
+ "cases": [
+  {
+   "id": "RT-01",
+   "lens": "numeric-identity",
+   "query": "máy 5 và 1",
+   "prev": [
+    "etap server"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 5",
+     "ETAP Server 1"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-02",
+   "lens": "numeric-identity",
+   "query": "copy mk máy 5 và 1",
+   "prev": [
+    "etap server"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 5",
+     "ETAP Server 1"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-03",
+   "lens": "numeric-identity",
+   "query": "máy 2 và 3",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 2",
+     "PSCAD Demo 3"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-04",
+   "lens": "numeric-identity",
+   "query": "năm 2024",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-05",
+   "lens": "numeric-identity",
+   "query": "năm nay",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-06",
+   "lens": "fuzzy-typos",
+   "query": "etap demo 3",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-07",
+   "lens": "fuzzy-typos",
+   "query": "ftp demo 3",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-08",
+   "lens": "fuzzy-typos",
+   "query": "rdp demo 3",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-09",
+   "lens": "fuzzy-typos",
+   "query": "nas demo 3",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-10",
+   "lens": "fuzzy-typos",
+   "query": "dev box d",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-11",
+   "lens": "fuzzy-typos",
+   "query": "zalopy",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-12",
+   "lens": "dropped-filler-homographs",
+   "query": "vpn nhà 3",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-13",
+   "lens": "dropped-filler-homographs",
+   "query": "zalo nhà",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-14",
+   "lens": "dropped-filler-homographs",
+   "query": "vpn nhà",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-15",
+   "lens": "dropped-filler-homographs",
+   "query": "wifi nhà",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-16",
+   "lens": "dropped-filler-homographs",
+   "query": "gmail nhà",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-17",
+   "lens": "dropped-filler-homographs",
+   "query": "zalo công ty",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-18",
+   "lens": "dropped-filler-homographs",
+   "query": "facebook trừ shop",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Personal",
+    "name": null
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-19",
+   "lens": "dropped-filler-homographs",
+   "query": "facebook demo trừ shop",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Personal",
+    "name": null
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-20",
+   "lens": "dropped-filler-homographs",
+   "query": "facebook trừ cá nhân",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Facebook — Demo Shop",
+    "name": null
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-21",
+   "lens": "dropped-filler-homographs",
+   "query": "pscad demo trừ 3",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 1",
+     "PSCAD Demo 2",
+     "PSCAD Demo 4",
+     "PSCAD Demo 5"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-22",
+   "lens": "dropped-filler-homographs",
+   "query": "etap server trừ 5",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 1",
+     "ETAP Server 11",
+     "ETAP Server 15",
+     "ETAP Server 51"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-23",
+   "lens": "dropped-filler-homographs",
+   "query": "vpn demo trừ 3",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-24",
+   "lens": "dropped-filler-homographs",
+   "query": "gmail trừ công ty",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-25",
+   "lens": "dropped-filler-homographs",
+   "query": "wifi trừ họp",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-26",
+   "lens": "dropped-filler-homographs",
+   "query": "ngân hàng trừ demo",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-27",
+   "lens": "dropped-filler-homographs",
+   "query": "dev box trừ b",
+   "prev": [],
+   "gold": {
+    "type": "entry",
+    "account": "Dev Box A",
+    "name": null
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-28",
+   "lens": "dropped-filler-homographs",
+   "query": "no",
+   "prev": [
+    "facebok shop"
+   ],
+   "gold": {
+    "type": "none"
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-29",
+   "lens": "context-bleed",
+   "query": "copy mật khẩu cái đầu và cái cuối",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 51"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-30",
+   "lens": "context-bleed",
+   "query": "cái đầu và cái cuối",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 51"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-31",
+   "lens": "context-bleed",
+   "query": "cái cuối và cái đầu",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 15",
+     "ETAP Server 51"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-32",
+   "lens": "context-bleed",
+   "query": "cái thứ hai và thứ ba",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 1",
+     "ETAP Server 5"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-33",
+   "lens": "context-bleed",
+   "query": "cho mình mật khẩu máy 1 và máy 5",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 1",
+     "ETAP Server 5"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  },
+  {
+   "id": "RT-34",
+   "lens": "context-bleed",
+   "query": "cái thứ 2 và 4",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "PSCAD Demo 2",
+     "PSCAD Demo 4"
+    ]
+   },
+   "verdicts": [
+    {
+     "reasonable": true,
+     "wrong": true
+    },
+    {
+     "reasonable": true,
+     "wrong": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+# static CRT: the control host must start on a clean Windows without the VC++ redistributable (the Windows Sandbox image has none)
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

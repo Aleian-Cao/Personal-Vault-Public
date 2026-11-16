@@ -1,0 +1,14 @@
+<Configuration>
+  <!-- Replace <REPO_ROOT> with your local checkout path before opening in Windows Sandbox -->
+  <VGpu>Disable</VGpu>
+  <Networking>Default</Networking>
+  <MappedFolders>
+    <MappedFolder><HostFolder><REPO_ROOT>\dist-candidates\PV-20261113-76AC0251-closure3</HostFolder><SandboxFolder>C:\cand</SandboxFolder><ReadOnly>true</ReadOnly></MappedFolder>
+    <MappedFolder><HostFolder><REPO_ROOT>\artifacts\control-host-target-r4s\release</HostFolder><SandboxFolder>C:\ctl</SandboxFolder><ReadOnly>true</ReadOnly></MappedFolder>
+    <MappedFolder><HostFolder><REPO_ROOT>\tools</HostFolder><SandboxFolder>C:\tools</SandboxFolder><ReadOnly>true</ReadOnly></MappedFolder>
+    <MappedFolder><HostFolder><REPO_ROOT>\web\e2e</HostFolder><SandboxFolder>C:\e2e</SandboxFolder><ReadOnly>true</ReadOnly></MappedFolder>
+    <MappedFolder><HostFolder><REPO_ROOT>\qa-sandbox\scripts</HostFolder><SandboxFolder>C:\scripts</SandboxFolder><ReadOnly>true</ReadOnly></MappedFolder>
+    <MappedFolder><HostFolder><REPO_ROOT>\artifacts\qa-sandbox-trace</HostFolder><SandboxFolder>C:\out</SandboxFolder><ReadOnly>false</ReadOnly></MappedFolder>
+  </MappedFolders>
+  <LogonCommand><Command>powershell -ExecutionPolicy Bypass -File C:\scripts\qa_trace.ps1</Command></LogonCommand>
+</Configuration>

@@ -1,0 +1,266 @@
+{
+ "description": "Round-2 blind red-team: wrong-account cases confirmed by 2 judges (2026-11-12). Long padded cases are tested explicitly in test_search_reliability.py.",
+ "cases": [
+  {
+   "id": "R2-01",
+   "lens": "alias-collision",
+   "query": "dev box ạ",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R2-02",
+   "lens": "alias-collision",
+   "query": "copy mật khẩu dev box ạ",
+   "prev": [],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "Dev Box A",
+     "Dev Box B"
+    ]
+   }
+  },
+  {
+   "id": "R2-03",
+   "lens": "alias-collision",
+   "query": "máy a",
+   "prev": [
+    "dev server"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "Dev Box A"
+   }
+  },
+  {
+   "id": "R2-04",
+   "lens": "numeric-identity",
+   "query": "etap 15a",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-05",
+   "lens": "numeric-identity",
+   "query": "ETAP 15-A",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-06",
+   "lens": "numeric-identity",
+   "query": "vpn a3",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-07",
+   "lens": "numeric-identity",
+   "query": "máy thứ nhất",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "ETAP Server 15"
+   }
+  },
+  {
+   "id": "R2-08",
+   "lens": "numeric-identity",
+   "query": "máy 0.5",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-09",
+   "lens": "fuzzy-typos",
+   "query": "sao chép mk etap server 5a",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-10",
+   "lens": "dropped-filler",
+   "query": "ngân hàng đông á",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-11",
+   "lens": "dropped-filler",
+   "query": "ngân hàng đồng á",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-12",
+   "lens": "dropped-filler",
+   "query": "anh Ba",
+   "prev": [],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-13",
+   "lens": "dropped-filler",
+   "query": "cái của anh Ba",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-14",
+   "lens": "dropped-filler",
+   "query": "máy của anh Ba",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-15",
+   "lens": "dropped-filler",
+   "query": "cái của em Hai",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-16",
+   "lens": "dropped-filler",
+   "query": "cái của anh Tú",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-17",
+   "lens": "dropped-filler",
+   "query": "cái của anh Năm",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-18",
+   "lens": "dropped-filler",
+   "query": "thứ của anh Ba",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-19",
+   "lens": "dropped-filler",
+   "query": "máy của em Hai",
+   "prev": [
+    "pscad"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-20",
+   "lens": "dropped-filler",
+   "query": "cái của anh Một",
+   "prev": [
+    "etap 5"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-21",
+   "lens": "dropped-filler",
+   "query": "cái của anh Sáu",
+   "prev": [
+    "synthetic"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-22",
+   "lens": "dropped-filler",
+   "query": "xem cái sau",
+   "prev": [
+    "synthetic"
+   ],
+   "gold": {
+    "type": "none"
+   }
+  },
+  {
+   "id": "R2-23",
+   "lens": "context-bleed",
+   "query": "máy 11 và cái đầu",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "ambiguous",
+    "accounts": [
+     "ETAP Server 11",
+     "ETAP Server 15"
+    ]
+   }
+  },
+  {
+   "id": "R2-24",
+   "lens": "context-bleed",
+   "query": "thứ 3",
+   "prev": [
+    "etap"
+   ],
+   "gold": {
+    "type": "entry",
+    "account": "ETAP Server 5"
+   }
+  }
+ ]
+}
